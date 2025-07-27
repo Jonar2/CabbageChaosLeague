@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Stats</title>
+  <style>
+    body { background: #000033; color: #00ffcc; text-align: center; font-family: "Comic Sans MS", cursive; }
+    table { border-collapse: collapse; margin: 20px auto; background: #111; color: #fff; }
+    th, td { border: 1px solid #ff00ff; padding: 6px 12px; }
+    th { background: #330033; }
+  </style>
+</head>
+<body>
+  <h1>📊 Weekly Team Stats 📊</h1>
+
+  <table id="stats-table"></table>
+<!-- Updated navigation links -->
+  <p>
+    <a href="index.html">
+    <img src="images/home.webp" alt="Back to Homes" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+    Home
+    </a>
+  <!-- Seperator -->
+    &nbsp;|&nbsp;
+    <a href="league_rules.html">
+    <img src="images/rules.png" alt="League Rules Button" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+    League Rules
+    </a>
+  <!-- Seperator -->
+      &nbsp;|&nbsp;
+  <!-- Roster Button -->
+    <a href="rosters.html">
+    <img src="images/rooster.png" alt="League Rosters Button" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+    Rosters
+    </a>
+  <!-- Seperator -->
+    &nbsp;|&nbsp;
+  <!-- Schedule Button -->
+    <a href="schedule.html">
+    <img src="images/schedule.png" alt="League Schedule" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+    Schedule
+    </a>
+  </p>
+  <!-- Paste your tab-delimited text here -->
+  <script id="raw-data" type="text/plain">
+Team 1 POS	Team 1 Player	Team 1 Points	Team 2 POS	Team 2 Player	Team 2 Points 
+QB	Josh Allen	30	QB	C.J. Stroud	20
+RB	Christian McCaffrey	20	RB	Travis Etienne	20
+RB	Derrick Henry	15	RB	Raheem Mostert	20
+WR	Keenan Allen	20	WR	Adam Thielen	12
+WR	Stefon Diggs	20	WR	Ja'Marr Chase	10
+FLEX	A.J. Brown	15	FLEX	Drake London	10
+TE	Sam LaPorta	10	TE	Cole Kmet	8
+DEF	Seahawks	5	DEF	Falcons	10
+K	Younghoe Koo - Falcons	40	K	Jason Myers - Seahawks	50
+RES - QB	Sam Howell	15	RES - QB	Joe Burrow	20
+RES - RB	Zack Moss	12	RES - RB	Saquon Barkley	20
+RES - WR	Tyler Lockett	30	RES - RB	Kenneth Walker III	10
+RES - WR	Jordan Addison	35	RES - WR	Zay Flowers	10
+RES - RB	De'Von Achane	20	RES - WR	DK Metcalf	10
+  </script>
+
+  <script>
+    const raw = document.getElementById("raw-data").textContent.trim();
+    const lines = raw.split("\n");
+    const table = document.getElementById("stats-table");
+
+    lines.forEach((line, idx) => {
+      const row = document.createElement("tr");
+      const columns = line.split("\t");
+      columns.forEach(col => {
+        const cell = document.createElement(idx === 0 ? "th" : "td");
+        cell.textContent = col;
+        row.appendChild(cell);
+      });
+      table.appendChild(row);
+    });
+  </script>
+
+  <a href="index.html">Back to Home</a>
+</body>
+</html>

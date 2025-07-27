@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chaotic Fantasy Football League 2000!</title>
+  <style>
+    body {
+      background: #000080 url('https://www.animatedimages.org/data/media/707/animated-stars-image-0370.gif') repeat;
+      color: #00ff00;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: yellow;
+      text-shadow: 2px 2px red;
+      font-size: 48px;
+      margin-top: 20px;
+    }
+    .marquee-container {
+      background: #ff0000;
+      color: white;
+      font-weight: bold;
+      border: 3px dashed yellow;
+      padding: 5px;
+      margin-bottom: 20px;
+    }
+    table {
+      border: 2px solid lime;
+      width: 80%;
+      margin: 0 auto;
+      background: #222;
+    }
+    th, td {
+      border: 1px solid lime;
+      padding: 10px;
+      color: #00ffcc;
+    }
+    a {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+    .blink {
+      animation: blinker 1s linear infinite;
+    }
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+  /* Sidebar Ad Styles */
+  #sidebar-ad {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 200px;
+    background: #ff0066;
+    border: 3px solid yellow;
+    color: white;
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    padding: 10px;
+    animation: flash 1s infinite;
+    z-index: 999;
+  }
+
+  #sidebar-ad .stick-figure {
+    font-size: 50px;
+    margin-bottom: 5px;
+  }
+
+  #sidebar-ad button {
+    background: yellow;
+    color: black;
+    border: none;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  @keyframes flash {
+    0% { background-color: #ff0066; }
+    50% { background-color: #ffcc00; }
+    100% { background-color: #ff0066; }
+  }
+  </style>
+</head>
+<body>
+  <div class="marquee-container">
+    <marquee behavior="scroll" direction="left">🔥 Welcome to the Most Chaotic Fantasy Football League Ever!!! 🔥</marquee>
+  </div>
+
+  <h1>💥 CHAOS LEAGUE 2000 💥</h1>
+
+  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Football GIF" style="width:300px; height:auto;">
+
+  <h2 class="blink">Current Standings</h2>
+
+  <table>
+    <tr>
+      <th>Team Name</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>The Blazing Blitzers</td>
+      <td>5</td>
+      <td>2</td>
+      <td>420</td>
+    </tr>
+    <tr>
+      <td>Chaos Crushers</td>
+      <td>4</td>
+      <td>3</td>
+      <td>395</td>
+    </tr>
+  </table>
+
+<!-- Updated navigation links -->
+    <p>
+        <a href="league_rules.html">
+            <img src="images/rules.png" alt="League Rules Button" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            League Rules
+        </a>
+    <!-- Seperator -->
+        &nbsp;|&nbsp;
+    <!-- Roster Button -->
+        <a href="rosters.html">
+            <img src="images/rooster.png" alt="League Rosters Button" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            Rosters
+        </a>
+    <!-- Seperator -->
+        &nbsp;|&nbsp;
+    <!-- Schedule Button -->
+        <a href="schedule.html">
+            <img src="images/schedule.png" alt="League Schedule" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            Schedule
+        </a>
+    <!-- Stats Button -->
+        <a href="stats.html">
+            <img src="images/stats.jpeg" alt="Stats" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            Stats
+        </a>    </p>
+
+  <p class="blink">✨ Updates coming soon! ✨</p>
+
+  <hr>
+  <p><small>© 2000-2025 Chaotic Fantasy Football League. Best viewed in Netscape Navigator.</small></p>
+<!-- Flashing Side Ad -->
+<div id="sidebar-ad">
+  <div class="ad-content">
+    <div class="stick-figure">🚺</div>
+    <p><strong>🔥 Single Ladies in Your Area! 🔥</strong></p>
+    <p>Click now for... um... friendship?</p>
+    <button onclick="alert('LOL. Nothing happens!')">CLICK HERE</button>
+  </div>
+</div>
+</body>
+</html>

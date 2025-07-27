@@ -1,0 +1,15 @@
+Team 1 POS	Team 1 Player	Team 1 Points	Team 2 POS	Team 2 Player	Team 2 Points 
+QB	Josh Allen	30	QB	C.J. Stroud	20
+RB	Christian McCaffrey	20	RB	Travis Etienne	20
+RB	Derrick Henry	15	RB	Raheem Mostert	20
+WR	Keenan Allen	20	WR	Adam Thielen	12
+WR	Stefon Diggs	20	WR	Ja'Marr Chase	10
+FLEX	A.J. Brown	15	FLEX	Drake London	10
+TE	Sam LaPorta	10	TE	Cole Kmet	8
+DEF	Seahawks	5	DEF	Falcons	10
+K	Younghoe Koo - Falcons	40	K	Jason Myers - Seahawks	50
+RES - QB	Sam Howell	15	RES - QB	Joe Burrow	20
+RES - RB	Zack Moss	12	RES - RB	Saquon Barkley	20
+RES - WR	Tyler Lockett	30	RES - RB	Kenneth Walker III	10
+RES - WR	Jordan Addison	35	RES - WR	Zay Flowers	10
+RES - RB	De'Von Achane	20	RES - WR	DK Metcalf	10
