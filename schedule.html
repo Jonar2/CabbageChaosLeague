@@ -14,6 +14,14 @@
       text-shadow: 2px 2px black;
       margin-top: 20px;
     }
+    .marquee-container {
+      background: #f700ff;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      border: 3px dashed rgb(21, 255, 0);
+      padding: 5px;
+      margin-bottom: 20px;
+    }
     table {
       border: 3px solid #ff00ff;
       width: 90%;
@@ -31,21 +39,21 @@
       background: #330033;
     }
     a {
-      display: inline-block;
-      margin-top: 20px;
-      color: #ff00ff;
-      font-weight: bold;
+      color: #ffff00;
       text-decoration: none;
-      background: black;
-      padding: 10px 15px;
-      border: 2px solid #ff00ff;
+      font-weight: bold;
     }
     a:hover {
       text-decoration: underline;
     }
+
   </style>
 </head>
 <body>
+  <div class="marquee-container">
+    <marquee behavior="scroll" direction="left">🔥 YOUR ONE STOP SHOP FOR ALL THINGS SCHEDULES!!! 🔥</marquee>
+  </div>
+
   <h1>🏈 CHAOS LEAGUE SCHEDULE 🏈</h1>
 
   <table>
@@ -72,6 +80,27 @@
     <tr><td>Week 14</td><td>Team 1 vs Team 4</td><td>Team 2 vs Team 6</td><td>Team 3 vs Team 5</td><td>Team 7 vs Team 8</td></tr>
   </table>
 
-  <a href="index.html">⬅ Back to Home</a>
+  <!-- Updated navigation links -->
+    <p>
+    <!-- League Home Button -->
+        <a href="index.html">
+            <img src="images/home.webp" alt="Home Button" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            Home
+        </a>
+    <!-- Seperator -->
+        &nbsp;|&nbsp;
+    <!-- Teams Button -->
+        <a href="teams.html">
+            <img src="images/teams.png" alt="Teams" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            Teams
+        </a>
+    <!-- Seperator -->
+        &nbsp;|&nbsp;
+    <!-- League Rules Button -->
+        <a href="league_rules.html">
+            <img src="images/rules.png" alt="League Rules Button" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            League Rules
+        </a>
+    </p>
 </body>
 </html>
