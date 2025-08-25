@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Chaos League Teams</title>
+  <style>
+    body {
+      background: linear-gradient(45deg, #ff0000, #0000ff, #00ff00, #ff00ff);
+      background-size: 600% 600%;
+      animation: backgroundShift 12s ease infinite;
+      font-family: "Comic Sans MS", cursive;
+      text-align: center;
+      margin: 0;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 3px 3px 10px #000;
+      margin-top: 20px;
+      animation: flashTitle 2s infinite alternate;
+    }
+
+    .teams-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .team-card {
+      border: 5px solid yellow;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 30px 10px magenta;
+      animation: pulse 3s infinite;
+      transition: transform 0.4s;
+    }
+
+    .team-card:hover {
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 0 50px 15px cyan;
+    }
+
+    .team-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    .team-name {
+      font-size: 2em;
+      margin: 10px 0;
+      color: #ffcc00;
+      text-shadow: 2px 2px 5px #000;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes backgroundShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    @keyframes flashTitle {
+      0% { color: #fff; }
+      50% { color: yellow; }
+      100% { color: #fff; }
+    }
+
+    @keyframes pulse {
+      0% {box-shadow: 0 0 30px 10px magenta;}
+      50% {box-shadow: 0 0 50px 20px red;}
+      100% {box-shadow: 0 0 30px 10px magenta;}
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .nav-links {
+      margin: 20px;
+      font-size: 1.2em;
+    }
+
+    .nav-links a {
+      color: yellow;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+      color: cyan;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔥 Chaos League Teams 🔥</h1>
+
+  <div class="teams-container">
+    <a href="Team1.html" class="team-card">
+      <img src="images/team1.png" alt="Team 1" style="vertical-align: middle; width:50px; height:50px; margin-right:0px;">
+      <div class="team-name">Team 1</div>
+    </a>
+    <a href="team2.html" class="team-card">
+      <img src="images/team2.png" alt="Team 2" style="vertical-align: middle; width:50px; height:50px; margin-right:0px;">
+      <div class="team-name">Team 2</div>
+    </a>
+    <a href="team3.html" class="team-card">
+      <img src="images/team3.png" alt="Team 3" style="vertical-align: middle; width:50px; height:50px; margin-right:0px;">
+      <div class="team-name">Team 3</div>
+    </a>
+    <a href="team4.html" class="team-card">
+      <img src="images/team4.png" alt="Team 4" style="vertical-align: middle; width:50px; height:50px; margin-right:0px;">
+      <div class="team-name">Team 4</div>
+    </a>
+    <a href="team5.html" class="team-card">
+      <img src="images/team5.png" alt="Team 5" style="vertical-align: middle; width:50px; height:50px; margin-right:0px;">
+      <div class="team-name">Team 5</div>
+    </a>
+    <a href="team6.html" class="team-card">
+      <img src="images/team6.png" alt="Team 6" style="vertical-align: middle; width:50px; height:50px; margin-right:0px;">
+      <div class="team-name">Team 6</div>
+    </a>
+    <a href="team7.html" class="team-card">
+      <img src="images/team7.png" alt="Team 7" style="vertical-align: middle; width:50px; height:50px; margin-right:0px;">
+      <div class="team-name">Team 7</div>
+    </a>
+    <a href="team8.html" class="team-card">
+      <img src="images/team8.png" alt="Team 8" style="vertical-align: middle; width:50px; height:50px; margin-right:0px;">
+      <div class="team-name">Team 8</div>
+    </a>
+  </div>
+
+  <div class="nav-links">
+  <!-- Updated navigation links -->
+    <p>
+    <!-- League Home Button -->
+        <a href="index.html">
+            <img src="images/home.webp" alt="Home Button" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            Home
+        </a>
+    <!-- Seperator -->
+        &nbsp;|&nbsp;
+    <!-- Schedule Button -->
+        <a href="schedule.html">
+            <img src="images/schedule.png" alt="League Schedule" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            Schedule
+        </a>
+    <!-- Seperator -->
+        &nbsp;|&nbsp;
+    <!-- League Rules Button -->
+        <a href="league_rules.html">
+            <img src="images/rules.png" alt="League Rules Button" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            League Rules
+        </a>
+    </p>
+  </div>
+</body>
+</html>
