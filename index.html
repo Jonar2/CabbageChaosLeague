@@ -46,6 +46,11 @@
         opacity: 0;
       }
     }
+  .nav-links {
+    margin-top: 20px;
+    font-size: 2.2em;
+  }
+
   /* Sidebar Ad Styles */
   #sidebar-ad {
     position: fixed;
@@ -82,6 +87,58 @@
     50% { background-color: #ffcc00; }
     100% { background-color: #ff0066; }
   }
+  .crazy-left-ad {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff00ff, #ffea00);
+  color: #000;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  border-right: 5px solid #000;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 5px 0px 10px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.crazy-left-content h2 {
+  font-size: 20px;
+  color: #ff0000;
+  text-shadow: 1px 1px #ffff00;
+}
+
+.crazy-left-content p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.crazy-left-content button {
+  background: #00ff00;
+  border: 3px solid #000;
+  font-size: 14px;
+  padding: 8px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); background: #00ff00; }
+  50% { transform: scale(1.1); background: #ff0000; color: #fff; }
+  100% { transform: scale(1); background: #00ff00; }
+}
+
+.crazy-left-content marquee {
+  font-weight: bold;
+  color: #0000ff;
+  margin-top: 10px;
+}
+
   </style>
 </head>
 <body>
@@ -152,7 +209,7 @@
     </tr>
 
   </table>
-
+  <div class="nav-links">
   <!-- Updated navigation links -->
     <p>
     <!-- Schedule Button -->
@@ -175,7 +232,7 @@
             League Rules
         </a>
     </p>
-
+  </div>
   <p class="blink">✨ Updates coming soon! ✨</p>
 
   <hr>
@@ -187,6 +244,14 @@
     <p><strong>🔥 Single Ladies in Your Area! 🔥</strong></p>
     <p>Click now for... um... friendship?</p>
     <button onclick="alert('LOL. Nothing happens, get bent!')">CLICK HERE</button>
+  </div>
+</div>
+<div class="crazy-left-ad">
+  <div class="crazy-left-content">
+    <h2>🔥 YOU WON! 🔥</h2>
+    <p>Click here to claim your<br><strong>FREE LASER PRINTER</strong>!</p>
+    <button>💥 CLAIM NOW 💥</button>
+    <marquee scrollamount="6" behavior="alternate">Only 3 Left! Hurry!!!</marquee>
   </div>
 </div>
 </body>
