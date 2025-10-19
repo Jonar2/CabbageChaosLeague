@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chaotic Fantasy Football League 2000!</title>
+  <style>
+    body {
+      background: #000080 url('https://www.animatedimages.org/data/media/707/animated-stars-image-0370.gif') repeat;
+      color: #00ff00;
+      font-family: "Courier New", cursive, Verdana;
+      text-align: center;
+    }
+    h1 {
+      color: yellow;
+      text-shadow: 2px 2px red;
+      font-size: 48px;
+      margin-top: 20px;
+    }
+    .marquee-container {
+      background: #ff0000;
+      color: white;
+      font-weight: bold;
+      border: 3px dashed yellow;
+      padding: 5px;
+      margin-bottom: 20px;
+    }
+    table {
+      border: 2px solid lime;
+      width: 80%;
+      margin: 0 auto;
+      background: #222;
+    }
+    th, td {
+      border: 1px solid lime;
+      padding: 10px;
+      color: #00ffcc;
+    }
+    a {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+    .blink {
+      animation: blinker 1s linear infinite;
+    }
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+  .nav-links {
+    margin-top: 20px;
+    font-size: 2.2em;
+  }
+
+  /* Sidebar Ad Styles */
+  #sidebar-ad {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 200px;
+    background: #ff0066;
+    border: 3px solid yellow;
+    color: white;
+    font-family: "Courier New", cursive, Verdana;
+    text-align: center;
+    padding: 10px;
+    animation: flash 1s infinite;
+    z-index: 999;
+  }
+
+  #sidebar-ad .stick-figure {
+    font-size: 50px;
+    margin-bottom: 5px;
+  }
+
+  #sidebar-ad button {
+    background: yellow;
+    color: black;
+    border: none;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  @keyframes flash {
+    0% { background-color: #ff0066; }
+    50% { background-color: #ffcc00; }
+    100% { background-color: #ff0066; }
+  }
+  .crazy-left-ad {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff00ff, #ffea00);
+  color: #000;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  border-right: 5px solid #000;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 5px 0px 10px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.crazy-left-content h2 {
+  font-size: 20px;
+  color: #ff0000;
+  text-shadow: 1px 1px #ffff00;
+}
+
+.crazy-left-content p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.crazy-left-content button {
+  background: #00ff00;
+  border: 3px solid #000;
+  font-size: 14px;
+  padding: 8px 10px;
+  margin-top: 5px;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); background: #00ff00; }
+  50% { transform: scale(1.1); background: #ff0000; color: #fff; }
+  100% { transform: scale(1); background: #00ff00; }
+}
+
+.crazy-left-content marquee {
+  font-weight: bold;
+  color: #0000ff;
+  margin-top: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="marquee-container">
+    <marquee behavior="scroll" direction="left">🔥 Welcome to the Most Chaotic Fantasy Football League Ever!!! 🔥</marquee>
+  </div>
+
+  <h1>💥 CHAOS LEAGUE 2000 💥</h1>
+
+  <img src="images/butt_fumble.gif" alt="Football GIF" style="width:540px; height:auto;">
+
+  <h2 class="blink">Current Standings</h2>
+
+  <table>
+    <tr>
+      <th>Team Name</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>Sierra's Mist</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Taylor's Big Homosexual Agenda</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Brad's Big Ballz</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Big Dick Jim's Jams</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    
+  </table>
+  <div class="nav-links">
+  <!-- Updated navigation links -->
+    <p>
+    <!-- Schedule Button -->
+        <a href="schedule.html">
+            <img src="images/schedule.png" alt="League Schedule" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            Schedule
+        </a>
+    <!-- Seperator -->
+        &nbsp;|&nbsp; 
+    <!-- Teams Button -->
+        <a href="teams.html">
+            <img src="images/teams.png" alt="Teams" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            Teams
+        </a>
+    <!-- Seperator -->
+        &nbsp;|&nbsp;
+    <!-- League Rules Button -->
+        <a href="league_rules.html">
+            <img src="images/rules.png" alt="League Rules Button" style="vertical-align: middle; width:30px; height:30px; margin-right:5px;">
+            League Rules
+        </a>
+    </p>
+  </div>
+  <p class="blink">✨ Updates coming soon! ✨</p>
+
+  <hr>
+  <p><small>© 2000-2025 Chaotic Fantasy Football League. Best viewed in Netscape Navigator.</small></p>
+<!-- Flashing Side Ad -->
+<div id="sidebar-ad">
+  <div class="ad-content">
+    <div class="stick-figure">🚺</div>
+    <p><strong>🔥 Single Ladies in Your Area! 🔥</strong></p>
+    <p>Click now for... um... friendship?</p>
+    <button onclick="alert('LOL. Nothing happens, get bent!')">CLICK HERE</button>
+  </div>
+</div>
+<div class="crazy-left-ad">
+  <div class="crazy-left-content">
+    <h2>🔥 YOU WON! 🔥</h2>
+    <p>Click here to claim your<br><strong>FREE LASER PRINTER</strong>!</p>
+    <button onclick="alert('Send name, birthday, and social security number to me and Ill send you a thing')">💥 CLAIM NOW 💥</button>
+    <marquee scrollamount="6" behavior="alternate">Only 3 Left! Hurry!!!</marquee>
+  </div>
+</div>
+</body>
+</html>
