@@ -58,7 +58,7 @@ async function loadRoster() {
         </tr>
       `;
     });
-    html += `</table>`;
+    html += `</tbody></table>`;
 
     container.innerHTML = html;
   } catch (error) {
