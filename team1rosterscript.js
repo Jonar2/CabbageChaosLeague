@@ -5,7 +5,7 @@
 // Google Sheet info
 const sheetID = "1QFPaDePq3zBzMt-2ziXsryi5UGdQVAROHWSKUYYO4nM";
 const sheetName = "FinalV2";
-const sheetRange = "B4:F27"; // Columns: Position | Player | Team | Bye | Headshot ID
+const sheetRange = "B3:F27"; // Columns: Position | Player | Team | Bye | Headshot ID
 
 // Construct the Google Sheets API URL
 const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(sheetName)}&range=${sheetRange}`;
