@@ -1,30 +1,61 @@
-async function fetchSierraRoster() {
-  const sheetID = "1QFPaDePq3zBzMt-2ziXsryi5UGdQVAROHWSKUYYO4nM";
-  const sheetName = "Final"; // URL-encoded tab name
-  const range = "C4:C27"; // adjust to match Sierra's rows
-  const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?sheet=${sheetName}&range=${range}&tqx=out:json`;
+// =========================
+// Sierra's Big Mist Roster Loader
+// =========================
+
+// Google Sheet info
+const sheetID = "1QFPaDePq3zBzMt-2ziXsryi5UGdQVAROHWSKUYYO4nM";
+const sheetName = "FinalV2";
+const sheetRange = "B4:F27"; // Columns: Position | Player | Team | Bye | Headshot ID
+
+// Construct the Google Sheets API URL
+const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(sheetName)}&range=${sheetRange}`;
+
+async function loadRoster() {
+  const container = document.getElementById("sheet-data");
+  container.innerHTML = "Loading roster…";
 
   try {
     const response = await fetch(url);
     const text = await response.text();
-    const json = JSON.parse(text.substring(47, text.length - 2));
 
-    // Extract values from the single-column range
-    const rows = json.table.rows.map(r => r.c[0]?.v ?? "");
+    // Clean up the weird JSON structure Google returns
+    const json = JSON.parse(text.substring(47).slice(0, -2));
+    const rows = json.table.rows;
 
-    // Render as a table (or list)
-    const container = document.getElementById("sheet-data");
-    let html = "<table border='1' cellpadding='5'><tr><th>Player</th></tr>";
-    rows.forEach(player => {
-      html += `<tr><td>${player}</td></tr>`;
+    let html = `<table>`;
+    rows.forEach(row => {
+      const pos = row.c[0]?.v || "";
+      const name = row.c[1]?.v || "";
+      const team = row.c[2]?.v || "";
+      const bye = row.c[3]?.v || "";
+      const headshotID = row.c[4]?.v || "";
+
+      let imgSrc = "";
+      if (pos === "DST") {
+        // Defense/team logo
+        imgSrc = `https://cdn.ssref.net/req/202508291/tlogo/pfr/${team.toLowerCase()}.png`;
+      } else {
+        // Player headshot
+        imgSrc = `https://www.pro-football-reference.com/req/20230307/images/headshots/${headshotID}.jpg`;
+      }
+
+      html += `
+        <tr>
+          <td>${pos}</td>
+          <td><img class="player" src="${imgSrc}" alt="${name}"> ${name}</td>
+          <td>${team}</td>
+          <td>${bye}</td>
+        </tr>
+      `;
     });
-    html += "</table>";
+    html += `</table>`;
 
     container.innerHTML = html;
-
-  } catch (err) {
-    console.error("Error fetching roster:", err);
+  } catch (error) {
+    console.error("Error loading Google Sheet data:", error);
+    container.innerHTML = "Error loading roster data.";
   }
 }
 
-fetchSierraRoster();
+// Run when page loads
+document.addEventListener("DOMContentLoaded", loadRoster);
