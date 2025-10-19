@@ -2,7 +2,7 @@ async function fetchSierraRoster() {
   const sheetID = "1QFPaDePq3zBzMt-2ziXsryi5UGdQVAROHWSKUYYO4nM";
   const sheetName = "Final"; // URL-encoded tab name
   const range = "C4:C27"; // adjust to match Sierra's rows
-  const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?range=${range}&tqx=out:json`;
+  const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?sheet=${sheetName}&range=${range}&tqx=out:json`;
 
   try {
     const response = await fetch(url);
