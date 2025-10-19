@@ -43,7 +43,7 @@ async function loadRoster() {
       let imgSrc = "";
       if (pos === "DST") {
         // Defense/team logo
-        imgSrc = `https://cdn.ssref.net/req/202508291/tlogo/pfr/${team.toLowerCase()}.png`;
+        imgSrc = `https://cdn.ssref.net/req/202510131/tlogo/pfr/${team.toLowerCase()}.png`;
       } else {
         // Player headshot
         imgSrc = `https://www.pro-football-reference.com/req/20230307/images/headshots/${headshotID}.jpg`;
