@@ -22,7 +22,17 @@ async function loadRoster() {
     const json = JSON.parse(text.substring(47).slice(0, -2));
     const rows = json.table.rows;
 
-    let html = `<table>`;
+    let html = `<table>
+  <thead>
+    <tr>
+      <th>Position</th>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Bye</th>
+    </tr>
+  </thead>
+  <tbody>
+`;
     rows.forEach(row => {
       const pos = row.c[0]?.v || "";
       const name = row.c[1]?.v || "";
